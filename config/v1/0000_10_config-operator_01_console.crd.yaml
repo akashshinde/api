@@ -59,6 +59,13 @@ spec:
                     provider to destroy their single sign-on session.'
                   type: string
                   pattern: ^$|^((https):\/\/?)[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|\/?))$
+            helm:
+              type: object
+              properties:
+                repo_list:
+                  type: array
+                  items:
+                    type: string
         status:
           description: status holds observed values from the cluster. They may not
             be overridden.

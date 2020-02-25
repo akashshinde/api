@@ -26,6 +26,12 @@ type Console struct {
 type ConsoleSpec struct {
 	// +optional
 	Authentication ConsoleAuthentication `json:"authentication"`
+
+	Helm Helm `json:"helm"`
+}
+
+type Helm struct {
+	RepoList []string `json:"repo_list"`
 }
 
 // ConsoleStatus defines the observed status of the Console.
